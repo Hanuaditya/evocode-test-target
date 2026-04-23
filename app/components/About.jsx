@@ -3,6 +3,17 @@ import Image from 'next/image'
 import React from 'react'
 
 const About = ({isDarkMode}) => {
+    // Create a new array including the achievement
+    const displayInfoList = [
+        ...infoList,
+        {
+            icon: assets.project_icon, // Reusing an existing icon from assets
+            iconDark: assets.project_iconDark, // Reusing an existing icon from assets
+            title: 'Achievements',
+            description: 'Hackfest-26 2nd runner up 36 hr national level hackathon with 30000 cash prize'
+        }
+    ];
+
     return (
         <div className='w-full px-[12%] py-10 scroll-mt-20 min-h-screen' id='about'>
             <h4 className='text-center mb-2 text-lg font-Ovo'>Introduction</h4>
@@ -24,20 +35,20 @@ const About = ({isDarkMode}) => {
                         molestias id cum soluta voluptate quod!</p>
 
                     <ul className='grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl'>
-                        {infoList.map(({ icon, iconDark, title, description }, index) => (
+                        {displayInfoList.map(({ icon, iconDark, title, description }, index) => (
                             <li key={index}
                                 className='
                                  border-[0.5px]
-                                 border-gray-400 
-                                 rounded-xl 
-                                 p-6 
+                                 border-gray-400
+                                 rounded-xl
+                                 p-6
                                  cursor-pointer
-                                 hover:bg-lightHover 
+                                 hover:bg-lightHover
                                  hover:-translate-y-1
                                  transition
                                  duration-300
                                  hover:shadow-black
-                                 dark:border-white 
+                                 dark:border-white
                                  dark:hover:shadow-white
                               dark:hover:bg-darkHover/50
                                   '>
@@ -52,17 +63,17 @@ const About = ({isDarkMode}) => {
                     <h4 className='my-6 text-gray-700 font-Ove dark:text-white/80'>Tools I use</h4>
 
                     <ul className='flex items-center gap-3 sm:gap-5'>{toolsData.map((tool, index) => (
-                        <li key={index} 
+                        <li key={index}
                         className='
-                        flex 
-                        items-center 
-                        justify-center 
-                        w-12 
-                        sm:w-14 
-                        aspect-square 
-                        border 
-                        border-gray-400 
-                        rounded-lg 
+                        flex
+                        items-center
+                        justify-center
+                        w-12
+                        sm:w-14
+                        aspect-square
+                        border
+                        border-gray-400
+                        rounded-lg
                         cursor-pointer
                         hover:-translate-y-1
                         duration-300
