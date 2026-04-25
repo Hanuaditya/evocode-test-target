@@ -6,7 +6,7 @@ const About = ({isDarkMode}) => {
     return (
         <div className='w-full px-[12%] py-10 scroll-mt-20 min-h-screen' id='about'>
             <h4 className='text-center mb-2 text-lg font-Ovo'>Introduction</h4>
-            <h2 className='text-center  text-5xl font-Ovo'>About me</h2>
+            <h2 className='text-center  text-5xl font-Ovo'>About Hanu Aditya</h2>
 
 
             <div className="flex w-full flex-col lg:flex-row items-center gap-20 my-20">
@@ -23,7 +23,7 @@ const About = ({isDarkMode}) => {
                         Quas accusamus, voluptas doloribus temporibus dolorem animi,
                         molestias id cum soluta voluptate quod!</p>
 
-                    <ul className='grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl'>
+                    <ul className='grid grid-cols1 sm:grid-cols-3 gap-6 max-w-2xl'>
                         {infoList.map(({ icon, iconDark, title, description }, index) => (
                             <li key={index}
                                 className='
