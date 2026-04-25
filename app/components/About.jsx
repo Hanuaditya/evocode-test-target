@@ -23,7 +23,7 @@ const About = ({isDarkMode}) => {
                         Quas accusamus, voluptas doloribus temporibus dolorem animi,
                         molestias id cum soluta voluptate quod!</p>
 
-                    <ul className='grid grid-cols-1 lg:grid-cols-4 gap-6 max-w-2xl'>
+                    <ul className='grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-2xl'>
                         {infoList.map(({ icon, iconDark, title, description }, index) => (
                             <li key={index}
                                 className='
@@ -46,26 +46,7 @@ const About = ({isDarkMode}) => {
                                 <p className='text-gray-600 text-sm dark:text-white/80'> {description}</p>
                             </li>
                         ))}
-                            <li
-                                className='
-                                 border-[0.5px]
-                                 border-gray-400
-                                 rounded-xl
-                                 p-6
-                                 cursor-pointer
-                                 hover:bg-lightHover
-                                 hover:-translate-y-1
-                                 transition
-                                 duration-300
-                                 hover:shadow-black
-                                 dark:border-white
-                                 dark:hover:shadow-white
-                              dark:hover:bg-darkHover/50
-                                  '>
-                                <Image src={isDarkMode ? infoList[0].iconDark : infoList[0].icon} alt='Achievements Icon' className='w-7 mt-3'></Image>
-                                <h3 className='my-4 font-semibold text-gray-700 dark:text-white'>Achievements</h3>
-                                <p className='text-gray-600 text-sm dark:text-white/80'>Hackfest-26 2nd runner up 36 hr national level hackathon with 30000 cash prize.</p>
-                            </li>
+                            
                     </ul>
 
 
