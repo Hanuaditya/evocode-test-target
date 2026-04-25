@@ -6,7 +6,7 @@ const About = ({isDarkMode}) => {
     return (
         <div className='w-full px-[12%] py-10 scroll-mt-20 min-h-screen' id='about'>
             <h4 className='text-center mb-2 text-lg font-Ovo'>Introduction</h4>
-            <h2 className='text-center  text-5xl font-Ovo'>About me</h2>
+            <h2 className='text-center  text-5xl font-Ovo'>About Hanu Aditya</h2>
 
 
             <div className="flex w-full flex-col lg:flex-row items-center gap-20 my-20">
