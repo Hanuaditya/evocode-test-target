@@ -23,21 +23,21 @@ const About = ({isDarkMode}) => {
                         Quas accusamus, voluptas doloribus temporibus dolorem animi,
                         molestias id cum soluta voluptate quod!</p>
 
-                    <ul className='grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl'>
+                    <ul className='grid grid-cols-1 lg:grid-cols-4 gap-6 max-w-2xl'>
                         {infoList.map(({ icon, iconDark, title, description }, index) => (
                             <li key={index}
                                 className='
                                  border-[0.5px]
-                                 border-gray-400 
-                                 rounded-xl 
-                                 p-6 
+                                 border-gray-400
+                                 rounded-xl
+                                 p-6
                                  cursor-pointer
-                                 hover:bg-lightHover 
+                                 hover:bg-lightHover
                                  hover:-translate-y-1
                                  transition
                                  duration-300
                                  hover:shadow-black
-                                 dark:border-white 
+                                 dark:border-white
                                  dark:hover:shadow-white
                               dark:hover:bg-darkHover/50
                                   '>
@@ -46,23 +46,43 @@ const About = ({isDarkMode}) => {
                                 <p className='text-gray-600 text-sm dark:text-white/80'> {description}</p>
                             </li>
                         ))}
+                            <li
+                                className='
+                                 border-[0.5px]
+                                 border-gray-400
+                                 rounded-xl
+                                 p-6
+                                 cursor-pointer
+                                 hover:bg-lightHover
+                                 hover:-translate-y-1
+                                 transition
+                                 duration-300
+                                 hover:shadow-black
+                                 dark:border-white
+                                 dark:hover:shadow-white
+                              dark:hover:bg-darkHover/50
+                                  '>
+                                <Image src={isDarkMode ? infoList[0].iconDark : infoList[0].icon} alt='Achievements Icon' className='w-7 mt-3'></Image>
+                                <h3 className='my-4 font-semibold text-gray-700 dark:text-white'>Achievements</h3>
+                                <p className='text-gray-600 text-sm dark:text-white/80'>Hackfest-26 2nd runner up 36 hr national level hackathon with 30000 cash prize.</p>
+                            </li>
                     </ul>
 
 
                     <h4 className='my-6 text-gray-700 font-Ove dark:text-white/80'>Tools I use</h4>
 
                     <ul className='flex items-center gap-3 sm:gap-5'>{toolsData.map((tool, index) => (
-                        <li key={index} 
+                        <li key={index}
                         className='
-                        flex 
-                        items-center 
-                        justify-center 
-                        w-12 
-                        sm:w-14 
-                        aspect-square 
-                        border 
-                        border-gray-400 
-                        rounded-lg 
+                        flex
+                        items-center
+                        justify-center
+                        w-12
+                        sm:w-14
+                        aspect-square
+                        border
+                        border-gray-400
+                        rounded-lg
                         cursor-pointer
                         hover:-translate-y-1
                         duration-300
